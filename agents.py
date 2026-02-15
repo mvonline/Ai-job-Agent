@@ -29,8 +29,8 @@ llm = get_llm()
 def create_job_researcher(tools):
     return Agent(
         role='Job Researcher',
-        goal='Find the most relevant job postings on LinkedIn, Indeed, and Google Jobs based on the user\'s CV and preferences.',
-        backstory='You are an expert at navigating job boards and search engines. You know how to find hidden gems and filter out irrelevant postings.',
+        goal='Identify relevant software companies in target cities, navigate to their career pages, and extract specific job openings that match the user\'s CV.',
+        backstory='You are a master of corporate OSINT and career page navigation. You don\'t just look at job boards; you find the sources. You know how to find software companies, startups, and tech giants, and you know exactly where to find their "Careers" or "Jobs" links to get the most up-to-date postings.',
         tools=tools,
         llm=llm,
         verbose=True,

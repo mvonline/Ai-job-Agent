@@ -28,16 +28,14 @@ def create_search_jobs_task(agent, cv_content, conditions):
     
     return Task(
         description=(
-            f"1. Analyze the following CV content to understand the candidate's core strengths, experience level, and preferred tech stack:\n"
-            f"CV Content: {cv_content[:1500]}\n"
-            f"2. Based on the CV and the user's preferred title '{job_titles}' and city '{city}', "
-            "formulate multiple search queries to find the most relevant job postings. "
-            "Use the Job Search Tool to find at least 15-20 potential job postings. "
-            "You MUST call the Job Search Tool multiple times if needed to get enough results. "
-            "3. Return the results as a list of jobs. For each job, provide a Title, Company, and URL. "
-            "Ensure the URL is a direct link to the job posting."
+            f"1. Analyze the CV to understand the profile: {cv_content[:1000]}\n"
+            f"2. Search for lists of software companies, tech startups, or IT firms in '{city}'.\n"
+            f"3. For the most relevant companies found, use the Web Scraper Tool to find their 'Careers' or 'Jobs' pages.\n"
+            f"4. Scrape those career pages to find specific openings matching '{job_titles}'.\n"
+            "5. You MUST find at least 15 potential job URLs from these company websites.\n"
+            "6. Return a list of [Title, Company, URL]. Direct company career page URLs are preferred over generic job board links."
         ),
-        expected_output="A list of at least 10 relevant job postings with Title, Company, and URL.",
+        expected_output="A list of at least 10 job postings found directly on company career pages.",
         agent=agent
     )
 

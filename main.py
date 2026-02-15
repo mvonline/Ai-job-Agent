@@ -127,9 +127,10 @@ def main():
     print(f"Conditions loaded: {job_titles} in {city}")
 
     # 2. Use Job Researcher Agent to find jobs based on CV
-    print("--- Researcher: Finding jobs based on CV analysis ---")
+    print("--- Researcher: Finding jobs via company career pages ---")
     search_tool = JobSearchTool()
-    researcher = create_job_researcher([search_tool])
+    scraper_tool = WebScraperTool()
+    researcher = create_job_researcher([search_tool, scraper_tool])
     search_task = create_search_jobs_task(researcher, cv_content, conditions_data)
     
     crew_search = Crew(agents=[researcher], tasks=[search_task], verbose=True)

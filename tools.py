@@ -58,11 +58,7 @@ class JobSearchTool(BaseTool):
 
         search_query = query.strip().replace('"', "").strip()
         if not search_query:
-            return "Error: empty search query. Provide a job title and location, e.g. 'Senior Backend Engineer Stockholm jobs'."
-
-        # Prefer query that already contains "jobs" to get job listings
-        if "job" not in search_query.lower():
-            search_query = f"{search_query} jobs"
+            return "Error: empty search query. Provide a company name or search terms."
 
         print(f"--- TOOL: Searching for: {search_query} ---")
 
