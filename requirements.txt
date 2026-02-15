@@ -1,0 +1,14 @@
+crewai
+crewai[tools]
+langchain_community
+langchain-ollama
+langchain-openai
+langchain-google-genai
+playwright
+playwright-stealth
+pandas
+openpyxl
+duckduckgo-search
+python-dotenv
+pypdf
+beautifulsoup4

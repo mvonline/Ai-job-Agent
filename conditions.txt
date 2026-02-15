@@ -1,0 +1,7 @@
+City: Stockholm, Sweden
+Work Condition: Remote or Hybrid or on-site
+Desired Salary: 80,000 EUR - 120,000 EUR
+Job title: Senior Backend Engineer or Team Lead
+tech stacks: Java, Spring Boot, Kafka, PostgreSQL, Redis, Docker, Kubernetes, AWS, php, laravel, typescript, nodejs, python, django, flask, mysql, mongodb, redis, docker, kubernetes, aws, azure, gcp
+Other Conditions: Focus on companies with modern tech stacks (React, Python, AWS). I am open for backend and team lead positions.
+
