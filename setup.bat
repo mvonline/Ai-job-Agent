@@ -28,8 +28,8 @@ if %errorlevel% neq 0 (
     echo Once installed, restart this script or run 'ollama pull llama3' manually.
 ) else (
     echo Ollama is already installed.
-    echo --- 4. Pulling Model (llama3) ---
-    ollama pull llama3
+    echo --- 4. Pulling Model (llama3.2) ---
+    ollama pull llama3.2
 )
 
 echo.

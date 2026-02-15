@@ -29,9 +29,9 @@ else
     echo "Ollama is already installed."
 fi
 
-echo "--- 4. Pulling Model (llama3) ---"
+echo "--- 4. Pulling Model (llama3.2) ---"
 if command -v ollama &> /dev/null; then
-    ollama pull llama3
+    ollama pull llama3.2
 else
     echo "[WARNING] Cannot pull model because Ollama is not available."
 fi
